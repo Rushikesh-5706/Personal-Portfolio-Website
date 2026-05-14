@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
+import { Github } from './Icons'
 
 export default function ProjectCard({ title, subtitle, description, stack, github, live, accent }) {
   const accentColor = accent === 'cyan' ? '#06b6d4' : '#7C3AED'

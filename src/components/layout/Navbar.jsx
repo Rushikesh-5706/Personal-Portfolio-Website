@@ -92,7 +92,6 @@ export default function Navbar() {
               <button
                 onClick={() => scrollTo(link.href)}
                 style={{
-                  background: 'none',
                   border: 'none',
                   cursor: 'pointer',
                   padding: '8px 16px',

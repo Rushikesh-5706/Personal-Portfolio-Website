@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Github, Linkedin } from '../ui/Icons'
 import portfolioData from '../../data/portfolioData'
 
 export default function Footer() {
