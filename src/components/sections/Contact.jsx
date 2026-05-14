@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail } from 'lucide-react'
-import { Github, Linkedin } from '../ui/Icons'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import portfolioData from '../../data/portfolioData'
 
 const contactItems = [
