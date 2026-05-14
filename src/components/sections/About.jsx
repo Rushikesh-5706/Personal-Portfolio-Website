@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer'
 import portfolioData from '../../data/portfolioData'
 
 const stats = [
-  { value: '3+', label: 'Production Systems Built' },
+  { value: '25+', label: 'Production Tasks Done' },
   { value: '10+', label: 'Technologies Mastered' },
   { value: 'AWS', label: 'Certified Developer' },
 ]
