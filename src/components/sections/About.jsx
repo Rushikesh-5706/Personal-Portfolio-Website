@@ -57,25 +57,28 @@ export default function About() {
                     boxShadow: '0 0 40px rgba(124,58,237,0.2)',
                   }}
                 >
-                  <img
-                    src="/images/avatar.jpg"
-                    alt="Rushikesh Kunisetty profile photo"
-                    width="320"
-                    height="320"
-                    fetchpriority="high"
-                    decoding="async"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      borderRadius: '50%',
-                      objectFit: 'cover',
-                      display: 'block',
-                    }}
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                      e.currentTarget.nextSibling.style.display = 'flex'
-                    }}
-                  />
+                  <picture>
+                    <source srcSet="/images/avatar.webp" type="image/webp" />
+                    <img
+                      src="/images/avatar.jpg"
+                      alt="Rushikesh Kunisetty profile photo"
+                      width="320"
+                      height="320"
+                      fetchpriority="high"
+                      decoding="async"
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        borderRadius: '50%',
+                        objectFit: 'cover',
+                        display: 'block',
+                      }}
+                      onError={(e) => {
+                        e.currentTarget.closest('picture').style.display = 'none'
+                        e.currentTarget.closest('picture').nextSibling.style.display = 'flex'
+                      }}
+                    />
+                  </picture>
                   <div
                     style={{
                       display: 'none',

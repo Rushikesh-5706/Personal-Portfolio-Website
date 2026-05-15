@@ -45,7 +45,7 @@ export default function Education() {
                 gap: '24px',
                 padding: '32px',
                 background: 'rgba(13,13,20,0.7)',
-                backdropFilter: 'blur(16px)',
+                backdropFilter: 'blur(10px)',
                 border: '1px solid rgba(255,255,255,0.05)',
                 borderRadius: '16px',
                 transition: 'border-color 0.3s ease, transform 0.3s ease',
