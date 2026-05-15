@@ -105,8 +105,8 @@ export default function Contact() {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '24px',
-                  padding: '36px 28px',
+                  gap: '16px',
+                  padding: '24px 20px',
                   background: 'linear-gradient(180deg, rgba(15,15,22,0.8) 0%, rgba(10,10,15,0.95) 100%)',
                   backdropFilter: 'blur(24px)',
                   borderRadius: '24px',
@@ -134,9 +134,9 @@ export default function Contact() {
                     hover: { scale: 1.1 }
                   }}
                   style={{
-                    width: '64px',
-                    height: '64px',
-                    borderRadius: '16px',
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '14px',
                     background: item.accentBg,
                     border: `1px solid ${item.accentBorder}`,
                     display: 'flex',
@@ -148,23 +148,23 @@ export default function Contact() {
                     transition: 'all 0.4s ease',
                   }}
                 >
-                  <Icon size={32} color={item.accent} aria-hidden="true" style={{ filter: `drop-shadow(0 0 12px ${item.accent})` }} />
+                  <Icon size={24} color={item.accent} aria-hidden="true" style={{ filter: `drop-shadow(0 0 10px ${item.accent})` }} />
                 </motion.div>
                 
-                <div style={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
+                <div style={{ position: 'relative', zIndex: 1, flex: 1, overflow: 'hidden' }}>
                   <div
                     style={{
-                      fontSize: '12px',
+                      fontSize: '11px',
                       fontWeight: '700',
                       letterSpacing: '0.15em',
                       color: '#7070a0',
                       textTransform: 'uppercase',
-                      marginBottom: '8px',
+                      marginBottom: '4px',
                     }}
                   >
                     {item.label}
                   </div>
-                  <div style={{ fontSize: 'clamp(15px, 2vw, 18px)', fontWeight: '600', color: '#e8e8f4', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
+                  <div style={{ fontSize: 'clamp(12px, 3.5vw, 14px)', fontWeight: '600', color: '#e8e8f4', whiteSpace: 'nowrap', letterSpacing: '-0.01em' }}>
                     {item.value}
                   </div>
                 </div>

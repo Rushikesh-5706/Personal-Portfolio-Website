@@ -20,7 +20,7 @@ export default function ProjectCard({ title, subtitle, description, stack, githu
         background: `linear-gradient(180deg, rgba(13,13,20,0.8) 0%, rgba(13,13,20,0.4) 100%)`,
         backdropFilter: 'blur(20px)',
         borderRadius: '20px',
-        padding: '36px',
+        padding: 'clamp(24px, 5vw, 36px)',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -39,16 +39,18 @@ export default function ProjectCard({ title, subtitle, description, stack, githu
         <div
           style={{
             display: 'inline-block',
-            padding: '6px 14px',
+            padding: '4px 12px',
             background: accentBg,
             border: `1px solid ${accentBorder}`,
             borderRadius: '8px',
-            fontSize: '12px',
+            fontSize: 'clamp(10px, 2vw, 12px)',
             fontWeight: '600',
             color: accentColor,
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
             marginBottom: '16px',
+            overflowWrap: 'anywhere',
+            wordBreak: 'break-word',
           }}
         >
           {subtitle}
@@ -56,31 +58,33 @@ export default function ProjectCard({ title, subtitle, description, stack, githu
         <h3
           style={{
             fontFamily: 'Syne, sans-serif',
-            fontSize: '22px',
+            fontSize: 'clamp(18px, 4vw, 22px)',
             fontWeight: '800',
             color: '#ffffff',
             lineHeight: '1.3',
             marginBottom: '16px',
+            overflowWrap: 'anywhere',
+            wordBreak: 'break-word',
           }}
         >
           {title}
         </h3>
-        <p style={{ fontSize: '15px', color: '#8888b0', lineHeight: '1.8', flexGrow: 1 }}>
+        <p style={{ fontSize: 'clamp(14px, 3vw, 15px)', color: '#8888b0', lineHeight: '1.7', flexGrow: 1 }}>
           {description}
         </p>
       </div>
 
       <div style={{ marginTop: 'auto', position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '24px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px' }}>
           {stack.map((tech) => (
             <span
               key={tech}
               style={{
-                padding: '6px 12px',
+                padding: '4px 10px',
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.08)',
                 borderRadius: '8px',
-                fontSize: '13px',
+                fontSize: 'clamp(12px, 2vw, 13px)',
                 color: '#a0a0c0',
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: '500',

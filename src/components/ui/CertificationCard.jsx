@@ -36,7 +36,7 @@ export default function CertificationCard({ title, category, description, provid
         background: `linear-gradient(180deg, rgba(13,13,20,0.8) 0%, rgba(13,13,20,0.4) 100%)`,
         backdropFilter: 'blur(20px)',
         borderRadius: '20px',
-        padding: '40px 32px',
+        padding: 'clamp(24px, 5vw, 40px) clamp(20px, 4vw, 32px)',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -61,20 +61,22 @@ export default function CertificationCard({ title, category, description, provid
           rest: { y: 0 },
           hover: { y: -6 }
         }}
-        style={{ marginBottom: '32px', position: 'relative', zIndex: 1, transition: 'all 0.4s ease' }}
+        style={{ marginBottom: '24px', position: 'relative', zIndex: 1, transition: 'all 0.4s ease', width: 'clamp(48px, 8vw, 64px)', height: 'clamp(48px, 8vw, 64px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       >
-        <Icon size={64} color={colors.hex} aria-hidden="true" style={{ filter: `drop-shadow(0 0 16px ${colors.glow})` }} />
+        <Icon size="100%" color={colors.hex} aria-hidden="true" style={{ filter: `drop-shadow(0 0 16px ${colors.glow})` }} />
       </motion.div>
 
       <h3
         style={{
           fontFamily: 'Syne, sans-serif',
-          fontSize: '24px',
+          fontSize: 'clamp(18px, 4vw, 24px)',
           fontWeight: '800',
           color: '#ffffff',
           lineHeight: '1.3',
-          marginBottom: '16px',
+          marginBottom: '12px',
           position: 'relative', zIndex: 1,
+          overflowWrap: 'anywhere',
+          wordBreak: 'break-word',
         }}
       >
         {title}
@@ -82,10 +84,10 @@ export default function CertificationCard({ title, category, description, provid
       
       <div
         style={{
-          fontSize: '15px',
+          fontSize: 'clamp(13px, 3vw, 15px)',
           fontWeight: '700',
           color: colors.hex,
-          marginBottom: '20px',
+          marginBottom: '16px',
           letterSpacing: '0.08em',
           textTransform: 'uppercase',
           position: 'relative', zIndex: 1,
@@ -94,7 +96,7 @@ export default function CertificationCard({ title, category, description, provid
         {provider}
       </div>
 
-      <p style={{ fontSize: '15px', color: '#8888b0', lineHeight: '1.8', flexGrow: 1, position: 'relative', zIndex: 1, marginBottom: links ? '32px' : '0' }}>
+      <p style={{ fontSize: 'clamp(14px, 3vw, 15px)', color: '#8888b0', lineHeight: '1.7', flexGrow: 1, position: 'relative', zIndex: 1, marginBottom: links ? '32px' : '0' }}>
         {description}
       </p>
 

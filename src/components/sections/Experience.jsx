@@ -29,7 +29,7 @@ export default function Experience() {
               transition={{ duration: 0.65, delay: 0.2 + index * 0.15, ease: [0.22, 1, 0.36, 1] }}
               style={{
                 position: 'relative',
-                padding: '48px',
+                padding: 'clamp(24px, 5vw, 48px)',
                 background: 'linear-gradient(180deg, rgba(13,13,20,0.9) 0%, rgba(13,13,20,0.5) 100%)',
                 backdropFilter: 'blur(24px)',
                 border: '1px solid rgba(124,58,237,0.2)',
@@ -40,27 +40,27 @@ export default function Experience() {
             >
               <div style={{ position: 'absolute', top: 0, right: 0, width: '300px', height: '300px', background: 'rgba(124,58,237,0.08)', filter: 'blur(80px)', pointerEvents: 'none' }} />
               
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '24px', marginBottom: '40px', position: 'relative', zIndex: 1 }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '12px' }}>
-                    <div style={{ padding: '12px', background: 'linear-gradient(135deg, rgba(124,58,237,0.2), rgba(124,58,237,0.05))', borderRadius: '12px', border: '1px solid rgba(124,58,237,0.3)' }}>
-                      <Briefcase size={28} color="#a78bfa" />
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: '20px', marginBottom: '32px', position: 'relative', zIndex: 1 }}>
+                <div style={{ flex: '1 1 min(100%, 400px)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '8px' }}>
+                    <div style={{ padding: 'clamp(8px, 2vw, 12px)', background: 'linear-gradient(135deg, rgba(124,58,237,0.2), rgba(124,58,237,0.05))', borderRadius: '12px', border: '1px solid rgba(124,58,237,0.3)', flexShrink: 0 }}>
+                      <Briefcase size={24} color="#a78bfa" />
                     </div>
-                    <h3 style={{ fontFamily: 'Syne, sans-serif', fontSize: '28px', fontWeight: '800', color: '#ffffff' }}>
+                    <h3 style={{ fontFamily: 'Syne, sans-serif', fontSize: 'clamp(18px, 4vw, 28px)', fontWeight: '800', color: '#ffffff', lineHeight: '1.2' }}>
                       {exp.role}
                     </h3>
                   </div>
-                  <div style={{ fontSize: '20px', fontWeight: '700', color: '#7C3AED', marginLeft: '68px', letterSpacing: '0.02em' }}>
+                  <div style={{ fontSize: 'clamp(15px, 3vw, 20px)', fontWeight: '700', color: '#7C3AED', marginLeft: 'clamp(48px, 12vw, 68px)', letterSpacing: '0.02em', lineHeight: '1.3' }}>
                     {exp.company}
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start', marginLeft: '68px', padding: '12px 20px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#a0a0c0', fontSize: '15px', fontWeight: '500' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start', marginLeft: 'clamp(0px, 12vw, 68px)', padding: '12px 20px', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#a0a0c0', fontSize: 'clamp(13px, 2vw, 15px)', fontWeight: '500' }}>
                     <Calendar size={18} color="#7C3AED" />
                     <span>{exp.duration}</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#a0a0c0', fontSize: '15px', fontWeight: '500' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#a0a0c0', fontSize: 'clamp(13px, 2vw, 15px)', fontWeight: '500' }}>
                     {exp.mode === 'Student Leadership Program' ? (
                       <Users size={18} color="#06b6d4" />
                     ) : (
@@ -71,29 +71,29 @@ export default function Experience() {
                 </div>
               </div>
 
-              <div style={{ position: 'relative', paddingLeft: '68px', zIndex: 1 }}>
-                <div style={{ position: 'absolute', left: '26px', top: '0', bottom: '0', width: '2px', background: 'linear-gradient(180deg, rgba(124,58,237,0.5) 0%, rgba(124,58,237,0) 100%)' }} />
+              <div style={{ position: 'relative', paddingLeft: 'clamp(48px, 12vw, 68px)', zIndex: 1 }}>
+                <div style={{ position: 'absolute', left: 'clamp(18px, 4.5vw, 26px)', top: '0', bottom: '0', width: '2px', background: 'linear-gradient(180deg, rgba(124,58,237,0.5) 0%, rgba(124,58,237,0) 100%)' }} />
                 
-                <ul style={{ listStyle: 'none', margin: '0 0 36px 0', padding: 0, display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                <ul style={{ listStyle: 'none', margin: '0 0 32px 0', padding: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {exp.description_points.map((point, idx) => (
-                    <li key={idx} style={{ position: 'relative', fontSize: '16px', color: '#e8e8f4', lineHeight: '1.8' }}>
-                      <span style={{ position: 'absolute', left: '-46px', top: '10px', width: '8px', height: '8px', borderRadius: '50%', background: '#a78bfa', boxShadow: '0 0 10px #a78bfa' }} />
+                    <li key={idx} style={{ position: 'relative', fontSize: 'clamp(14px, 2.5vw, 16px)', color: '#e8e8f4', lineHeight: '1.7' }}>
+                      <span style={{ position: 'absolute', left: 'clamp(-34px, -8vw, -46px)', top: '8px', width: '8px', height: '8px', borderRadius: '50%', background: '#a78bfa', boxShadow: '0 0 10px #a78bfa' }} />
                       {point}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div style={{ marginLeft: '68px', display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: exp.certificate_button ? '32px' : '0', position: 'relative', zIndex: 1 }}>
+              <div style={{ marginLeft: 'clamp(48px, 12vw, 68px)', display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: exp.certificate_button ? '28px' : '0', position: 'relative', zIndex: 1 }}>
                 {exp.skills.map((skill, idx) => (
                   <span
                     key={idx}
                     style={{
-                      padding: '6px 14px',
+                      padding: '6px 12px',
                       background: 'rgba(124,58,237,0.06)',
                       border: '1px solid rgba(124,58,237,0.2)',
                       borderRadius: '8px',
-                      fontSize: '13px',
+                      fontSize: 'clamp(12px, 2vw, 13px)',
                       color: '#a78bfa',
                       fontWeight: '500',
                     }}
@@ -104,7 +104,7 @@ export default function Experience() {
               </div>
 
               {exp.certificate_button && (
-                <div style={{ marginLeft: '68px', position: 'relative', zIndex: 1 }}>
+                <div style={{ marginLeft: 'clamp(48px, 12vw, 68px)', position: 'relative', zIndex: 1, marginTop: '24px' }}>
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

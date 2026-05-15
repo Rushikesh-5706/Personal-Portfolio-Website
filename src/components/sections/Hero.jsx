@@ -127,18 +127,16 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           style={{
             fontFamily: 'Syne, sans-serif',
-            fontSize: 'clamp(3.5rem, 12vw, 8.5rem)',
+            fontSize: 'clamp(2.5rem, 10vw, 8.5rem)',
             fontWeight: '800',
-            lineHeight: '0.9',
-            letterSpacing: '-0.04em',
+            lineHeight: '1',
+            letterSpacing: '-0.02em',
             color: '#ffffff',
             marginBottom: '24px',
             textShadow: '0 20px 40px rgba(0,0,0,0.5)',
             width: '100%',
             maxWidth: '100%',
-            wordWrap: 'break-word',
-            overflowWrap: 'break-word',
-            whiteSpace: 'normal',
+            whiteSpace: 'nowrap',
             position: 'relative',
           }}
         >

@@ -24,8 +24,8 @@ export default function SkillBadge({ name, category }) {
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        gap: '12px',
-        padding: '12px 20px',
+        gap: 'clamp(8px, 2vw, 12px)',
+        padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px)',
         background: `linear-gradient(135deg, ${config.bg}, rgba(13,13,20,0.8))`,
         border: `1px solid ${config.border}`,
         borderRadius: '12px',
@@ -39,9 +39,9 @@ export default function SkillBadge({ name, category }) {
         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         style={{ display: 'flex', alignItems: 'center' }}
       >
-        <Icon size={20} color={config.color} aria-hidden="true" />
+        <Icon size={18} color={config.color} aria-hidden="true" />
       </motion.div>
-      <span style={{ fontSize: '14px', fontWeight: '500', color: '#e8e8f4' }}>{name}</span>
+      <span style={{ fontSize: 'clamp(12px, 2.5vw, 14px)', fontWeight: '500', color: '#e8e8f4', whiteSpace: 'nowrap' }}>{name}</span>
     </motion.div>
   )
 }
