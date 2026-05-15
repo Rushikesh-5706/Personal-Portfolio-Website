@@ -6,8 +6,12 @@ import useActiveSection from '../../hooks/useActiveSection'
 const NAV_LINKS = [
   { label: 'Home', href: 'hero' },
   { label: 'About', href: 'about' },
+  { label: 'Experience', href: 'experience' },
+  { label: 'Education', href: 'education' },
   { label: 'Skills', href: 'skills' },
   { label: 'Projects', href: 'projects' },
+  { label: 'Certifications', href: 'certifications' },
+  { label: 'Achievements', href: 'achievements' },
   { label: 'Contact', href: 'contact' },
 ]
 
