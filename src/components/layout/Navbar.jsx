@@ -102,7 +102,7 @@ export default function Navbar() {
                   fontWeight: '600',
                   borderRadius: '100px',
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                  color: activeSection === link.href ? '#ffffff' : '#8888b0',
+                  color: activeSection === link.href ? '#ffffff' : '#aaaacc',
                   background: activeSection === link.href ? 'rgba(124,58,237,0.15)' : 'transparent',
                   border: activeSection === link.href ? '1px solid rgba(124,58,237,0.3)' : '1px solid transparent',
                   boxShadow: activeSection === link.href ? '0 0 15px rgba(124,58,237,0.1)' : 'none',
@@ -115,7 +115,7 @@ export default function Navbar() {
                 }}
                 onMouseLeave={(e) => {
                   if (activeSection !== link.href) {
-                    e.currentTarget.style.color = '#8888b0'
+                    e.currentTarget.style.color = '#aaaacc'
                     e.currentTarget.style.background = 'transparent'
                   }
                 }}

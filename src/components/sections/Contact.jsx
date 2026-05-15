@@ -108,7 +108,7 @@ export default function Contact() {
                   gap: '16px',
                   padding: '24px 20px',
                   background: 'linear-gradient(180deg, rgba(15,15,22,0.8) 0%, rgba(10,10,15,0.95) 100%)',
-                  backdropFilter: 'blur(24px)',
+                  backdropFilter: 'blur(10px)',
                   borderRadius: '24px',
                   textDecoration: 'none',
                   position: 'relative',

@@ -62,6 +62,8 @@ export default function About() {
                     alt="Rushikesh Kunisetty profile photo"
                     width="320"
                     height="320"
+                    fetchpriority="high"
+                    decoding="async"
                     style={{
                       width: '100%',
                       height: '100%',
@@ -111,7 +113,7 @@ export default function About() {
             <motion.div variants={childVariants}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', marginBottom: '36px' }}>
                 {portfolioData.bio.map((para, i) => (
-                  <p key={i} style={{ fontSize: '16px', color: '#7070a0', lineHeight: '1.8' }}>
+                  <p key={i} style={{ fontSize: 'clamp(15px, 2.5vw, 16px)', color: '#9898be', lineHeight: '1.8' }}>
                     {para}
                   </p>
                 ))}

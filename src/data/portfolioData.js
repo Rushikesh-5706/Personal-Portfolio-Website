@@ -141,7 +141,7 @@ const portfolioData = {
       provider: 'IBM',
       icon: 'ibm',
       links: {
-        view: '/ibm-genai-certificate.pdf',
+        view: '#',
         verify: '#',
       },
     },
@@ -163,7 +163,7 @@ const portfolioData = {
       provider: 'Google Cloud',
       icon: 'gcp',
       links: {
-        view: '/google-cloud-certificate.pdf',
+        view: '#',
         verify: '#',
       },
     },

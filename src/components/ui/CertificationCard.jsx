@@ -34,7 +34,7 @@ export default function CertificationCard({ title, category, description, provid
       }}
       style={{
         background: `linear-gradient(180deg, rgba(13,13,20,0.8) 0%, rgba(13,13,20,0.4) 100%)`,
-        backdropFilter: 'blur(20px)',
+        backdropFilter: 'blur(10px)',
         borderRadius: '20px',
         padding: 'clamp(24px, 5vw, 40px) clamp(20px, 4vw, 32px)',
         height: '100%',
@@ -63,7 +63,7 @@ export default function CertificationCard({ title, category, description, provid
         }}
         style={{ marginBottom: '24px', position: 'relative', zIndex: 1, transition: 'all 0.4s ease', width: 'clamp(48px, 8vw, 64px)', height: 'clamp(48px, 8vw, 64px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       >
-        <Icon size="100%" color={colors.hex} aria-hidden="true" style={{ filter: `drop-shadow(0 0 16px ${colors.glow})` }} />
+        <Icon size={48} color={colors.hex} aria-hidden="true" style={{ filter: `drop-shadow(0 0 16px ${colors.glow})` }} />
       </motion.div>
 
       <h3

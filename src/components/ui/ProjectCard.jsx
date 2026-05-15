@@ -18,7 +18,7 @@ export default function ProjectCard({ title, subtitle, description, stack, githu
       }}
       style={{
         background: `linear-gradient(180deg, rgba(13,13,20,0.8) 0%, rgba(13,13,20,0.4) 100%)`,
-        backdropFilter: 'blur(20px)',
+        backdropFilter: 'blur(10px)',
         borderRadius: '20px',
         padding: 'clamp(24px, 5vw, 36px)',
         height: '100%',

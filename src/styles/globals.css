@@ -9,7 +9,7 @@
   --color-accent: #7C3AED;
   --color-cyan: #06b6d4;
   --color-text: #e8e8f4;
-  --color-muted: #7070a0;
+  --color-muted: #9898be;
 }
 
 *,
@@ -89,8 +89,8 @@ body {
 
 .glass-card {
   background: rgba(13, 13, 20, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(124, 58, 237, 0.15);
   border-radius: 16px;
   transition: border-color 0.3s ease, transform 0.3s ease;
@@ -129,30 +129,38 @@ body {
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(80px);
   pointer-events: none;
+  will-change: transform;
 }
 .blob-1 {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, transparent 70%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
   top: -150px;
   right: -150px;
 }
 .blob-2 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
   bottom: -100px;
   left: -100px;
 }
 .blob-3 {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .blob { filter: blur(50px); }
+  .blob-1 { width: 280px; height: 280px; }
+  .blob-2 { width: 260px; height: 260px; }
+  .blob-3 { width: 220px; height: 220px; }
 }
 
 .noise-overlay {
@@ -165,12 +173,8 @@ body {
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: 200% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
 }
 
 .shimmer-text {
@@ -231,6 +235,7 @@ body {
   border-color: rgba(124, 58, 237, 0.8);
 }
 
+/* REQUIRED: Accessibility — prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -31,7 +31,7 @@ export default function Experience() {
                 position: 'relative',
                 padding: 'clamp(24px, 5vw, 48px)',
                 background: 'linear-gradient(180deg, rgba(13,13,20,0.9) 0%, rgba(13,13,20,0.5) 100%)',
-                backdropFilter: 'blur(24px)',
+                backdropFilter: 'blur(10px)',
                 border: '1px solid rgba(124,58,237,0.2)',
                 borderRadius: '24px',
                 boxShadow: '0 20px 40px rgba(0,0,0,0.4)',

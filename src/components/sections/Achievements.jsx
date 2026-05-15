@@ -54,7 +54,7 @@ export default function Achievements() {
                   gap: 'clamp(16px, 4vw, 24px)',
                   padding: 'clamp(24px, 5vw, 40px)',
                   background: 'linear-gradient(180deg, rgba(13,13,20,0.8) 0%, rgba(13,13,20,0.4) 100%)',
-                  backdropFilter: 'blur(24px)',
+                  backdropFilter: 'blur(10px)',
                   border: `1px solid ${borderColor}`,
                   borderRadius: '24px',
                   transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -67,7 +67,7 @@ export default function Achievements() {
                   <div style={{ position: 'absolute', top: 0, right: 0, width: '200px', height: '200px', background: 'rgba(6,182,212,0.1)', filter: 'blur(60px)', pointerEvents: 'none' }} />
                 )}
                 <div style={{ flexShrink: 0, position: 'relative', zIndex: 1, width: 'clamp(40px, 8vw, 64px)', height: 'clamp(40px, 8vw, 64px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Icon size="100%" color={achievement.highlight ? '#06b6d4' : '#a0a0c0'} aria-hidden="true" style={{ filter: achievement.highlight ? 'drop-shadow(0 0 16px rgba(6,182,212,0.6))' : 'none' }} />
+                  <Icon size={40} color={achievement.highlight ? '#06b6d4' : '#a0a0c0'} aria-hidden="true" style={{ filter: achievement.highlight ? 'drop-shadow(0 0 16px rgba(6,182,212,0.6))' : 'none' }} />
                 </div>
                 <div style={{ position: 'relative', zIndex: 1, flex: 1, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
                   <h3
