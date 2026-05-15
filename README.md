@@ -2,7 +2,7 @@
 
 A personal portfolio website built with React and Vite, featuring a dark neural aesthetic, Framer Motion animations, parallax scrolling, and a typewriter role display. The site documents my work across AI engineering, AWS cloud development, and blockchain systems.
 
-**Live Site:** [Update this after deployment — see Deployment section below]
+**Live Site:** [https://rushikesh-kunisetty-personal-portfolio.vercel.app/]
 
 ---
 
