@@ -9,33 +9,46 @@ export default function ProjectCard({ title, subtitle, description, stack, githu
 
   return (
     <motion.article
-      whileHover={{ y: -6, borderColor: accentBorderHover }}
+      initial="rest"
+      whileHover="hover"
+      animate="rest"
+      variants={{
+        rest: { y: 0, scale: 1, rotateX: 0, rotateY: 0, borderColor: accentBorder, boxShadow: '0 4px 10px rgba(0,0,0,0.2)' },
+        hover: { y: -12, scale: 1.02, rotateX: 2, rotateY: -2, borderColor: accentColor, boxShadow: `0 20px 40px ${accentBg}` },
+      }}
       style={{
-        background: 'rgba(13,13,20,0.7)',
-        backdropFilter: 'blur(16px)',
-        border: `1px solid ${accentBorder}`,
-        borderRadius: '16px',
-        padding: '28px',
+        background: `linear-gradient(180deg, rgba(13,13,20,0.8) 0%, rgba(13,13,20,0.4) 100%)`,
+        backdropFilter: 'blur(20px)',
+        borderRadius: '20px',
+        padding: '36px',
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        transition: 'border-color 0.3s ease',
+        position: 'relative',
+        overflow: 'hidden',
+        border: '1px solid',
+        transformPerspective: 1000,
+        transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
       }}
     >
-      <div style={{ marginBottom: '20px' }}>
+      <motion.div 
+        variants={{ rest: { opacity: 0.5, scale: 1 }, hover: { opacity: 1, scale: 1.2 } }}
+        style={{ position: 'absolute', top: '-20px', right: '-20px', width: '200px', height: '200px', background: accentBg, filter: 'blur(60px)', pointerEvents: 'none', transition: 'all 0.4s ease' }} 
+      />
+      <div style={{ marginBottom: '24px', position: 'relative', zIndex: 1 }}>
         <div
           style={{
             display: 'inline-block',
-            padding: '4px 12px',
+            padding: '6px 14px',
             background: accentBg,
             border: `1px solid ${accentBorder}`,
-            borderRadius: '6px',
-            fontSize: '11px',
+            borderRadius: '8px',
+            fontSize: '12px',
             fontWeight: '600',
             color: accentColor,
-            letterSpacing: '0.08em',
+            letterSpacing: '0.1em',
             textTransform: 'uppercase',
-            marginBottom: '12px',
+            marginBottom: '16px',
           }}
         >
           {subtitle}
@@ -43,33 +56,34 @@ export default function ProjectCard({ title, subtitle, description, stack, githu
         <h3
           style={{
             fontFamily: 'Syne, sans-serif',
-            fontSize: '18px',
-            fontWeight: '700',
-            color: '#e8e8f4',
+            fontSize: '22px',
+            fontWeight: '800',
+            color: '#ffffff',
             lineHeight: '1.3',
-            marginBottom: '12px',
+            marginBottom: '16px',
           }}
         >
           {title}
         </h3>
-        <p style={{ fontSize: '14px', color: '#7070a0', lineHeight: '1.7', flexGrow: 1 }}>
+        <p style={{ fontSize: '15px', color: '#8888b0', lineHeight: '1.8', flexGrow: 1 }}>
           {description}
         </p>
       </div>
 
-      <div style={{ marginTop: 'auto' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '20px' }}>
+      <div style={{ marginTop: 'auto', position: 'relative', zIndex: 1 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '24px' }}>
           {stack.map((tech) => (
             <span
               key={tech}
               style={{
-                padding: '4px 10px',
-                background: 'rgba(255,255,255,0.05)',
+                padding: '6px 12px',
+                background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '6px',
-                fontSize: '12px',
-                color: '#7070a0',
-                fontFamily: 'monospace',
+                borderRadius: '8px',
+                fontSize: '13px',
+                color: '#a0a0c0',
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: '500',
               }}
             >
               {tech}

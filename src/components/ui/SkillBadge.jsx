@@ -19,21 +19,22 @@ export default function SkillBadge({ name, category }) {
 
   return (
     <motion.div
-      whileHover={{ scale: 1.07, y: -2 }}
+      whileHover={{ scale: 1.05, y: -4, boxShadow: `0 8px 24px ${config.bg}` }}
       whileTap={{ scale: 0.97 }}
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        gap: '8px',
-        padding: '8px 16px',
-        background: config.bg,
+        gap: '12px',
+        padding: '12px 20px',
+        background: `linear-gradient(135deg, ${config.bg}, rgba(13,13,20,0.8))`,
         border: `1px solid ${config.border}`,
-        borderRadius: '10px',
+        borderRadius: '12px',
         cursor: 'default',
-        transition: 'border-color 0.2s ease',
+        transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+        backdropFilter: 'blur(8px)',
       }}
     >
-      <Icon size={15} color={config.color} aria-hidden="true" />
+      <Icon size={20} color={config.color} aria-hidden="true" />
       <span style={{ fontSize: '14px', fontWeight: '500', color: '#e8e8f4' }}>{name}</span>
     </motion.div>
   )

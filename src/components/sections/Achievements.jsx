@@ -48,36 +48,42 @@ export default function Achievements() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                whileHover={{ y: -6, borderColor: '#06b6d4' }}
+                whileHover={{ y: -8, borderColor: '#06b6d4', boxShadow: achievement.highlight ? '0 12px 40px rgba(6,182,212,0.2)' : '0 12px 30px rgba(0,0,0,0.4)' }}
                 style={{
                   display: 'flex',
-                  gap: '20px',
-                  padding: '32px',
-                  background: 'rgba(13,13,20,0.7)',
-                  backdropFilter: 'blur(16px)',
+                  gap: '24px',
+                  padding: '40px',
+                  background: 'linear-gradient(180deg, rgba(13,13,20,0.8) 0%, rgba(13,13,20,0.4) 100%)',
+                  backdropFilter: 'blur(24px)',
                   border: `1px solid ${borderColor}`,
-                  borderRadius: '16px',
-                  transition: 'border-color 0.3s ease, transform 0.3s ease',
+                  borderRadius: '24px',
+                  transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
                   height: '100%',
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
               >
-                <div style={{ flexShrink: 0 }}>
-                  <Icon size={32} color="#06b6d4" aria-hidden="true" />
+                {achievement.highlight && (
+                  <div style={{ position: 'absolute', top: 0, right: 0, width: '200px', height: '200px', background: 'rgba(6,182,212,0.1)', filter: 'blur(60px)', pointerEvents: 'none' }} />
+                )}
+                <div style={{ flexShrink: 0, position: 'relative', zIndex: 1 }}>
+                  <Icon size={64} color={achievement.highlight ? '#06b6d4' : '#a0a0c0'} aria-hidden="true" style={{ filter: achievement.highlight ? 'drop-shadow(0 0 16px rgba(6,182,212,0.6))' : 'none' }} />
                 </div>
-                <div>
+                <div style={{ position: 'relative', zIndex: 1 }}>
                   <h3
                     style={{
                       fontFamily: 'Syne, sans-serif',
-                      fontSize: '20px',
-                      fontWeight: '700',
-                      color: achievement.highlight ? '#06b6d4' : '#e8e8f4',
-                      marginBottom: '12px',
+                      fontSize: '24px',
+                      fontWeight: '800',
+                      color: achievement.highlight ? '#06b6d4' : '#ffffff',
+                      marginBottom: '16px',
                       lineHeight: '1.3',
+                      textShadow: achievement.highlight ? '0 0 20px rgba(6,182,212,0.3)' : 'none',
                     }}
                   >
                     {achievement.title}
                   </h3>
-                  <p style={{ fontSize: '15px', color: '#7070a0', lineHeight: '1.7' }}>
+                  <p style={{ fontSize: '16px', color: '#8888b0', lineHeight: '1.8' }}>
                     {achievement.description}
                   </p>
                 </div>

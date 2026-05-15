@@ -96,24 +96,27 @@ export default function Navbar() {
               <button
                 onClick={() => scrollTo(link.href)}
                 style={{
-                  border: 'none',
                   cursor: 'pointer',
                   padding: '8px 16px',
                   fontSize: '14px',
-                  fontWeight: '500',
-                  borderRadius: '8px',
-                  transition: 'color 0.2s ease, background 0.2s ease',
-                  color: activeSection === link.href ? '#7C3AED' : '#7070a0',
-                  background: activeSection === link.href ? 'rgba(124,58,237,0.08)' : 'transparent',
+                  fontWeight: '600',
+                  borderRadius: '100px',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                  color: activeSection === link.href ? '#ffffff' : '#8888b0',
+                  background: activeSection === link.href ? 'rgba(124,58,237,0.15)' : 'transparent',
+                  border: activeSection === link.href ? '1px solid rgba(124,58,237,0.3)' : '1px solid transparent',
+                  boxShadow: activeSection === link.href ? '0 0 15px rgba(124,58,237,0.1)' : 'none',
                 }}
                 onMouseEnter={(e) => {
                   if (activeSection !== link.href) {
-                    e.currentTarget.style.color = '#e8e8f4'
+                    e.currentTarget.style.color = '#ffffff'
+                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)'
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (activeSection !== link.href) {
-                    e.currentTarget.style.color = '#7070a0'
+                    e.currentTarget.style.color = '#8888b0'
+                    e.currentTarget.style.background = 'transparent'
                   }
                 }}
               >

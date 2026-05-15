@@ -79,10 +79,16 @@ export default function Hero() {
         style={{
           position: 'relative',
           zIndex: 10,
-          maxWidth: '860px',
+          width: '100%',
+          maxWidth: '1200px',
           margin: '0 auto',
           padding: '120px 24px 80px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
           textAlign: 'center',
+          overflow: 'hidden',
         }}
       >
         <motion.div
@@ -115,22 +121,30 @@ export default function Hero() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 36 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: 36, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           style={{
             fontFamily: 'Syne, sans-serif',
-            fontSize: 'clamp(3.2rem, 8vw, 6.5rem)',
+            fontSize: 'clamp(3.5rem, 12vw, 8.5rem)',
             fontWeight: '800',
-            lineHeight: '1.0',
-            letterSpacing: '-0.03em',
-            color: '#e8e8f4',
-            marginBottom: '20px',
+            lineHeight: '0.9',
+            letterSpacing: '-0.04em',
+            color: '#ffffff',
+            marginBottom: '24px',
+            textShadow: '0 20px 40px rgba(0,0,0,0.5)',
+            width: '100%',
+            maxWidth: '100%',
+            wordWrap: 'break-word',
+            overflowWrap: 'break-word',
+            whiteSpace: 'normal',
+            position: 'relative',
           }}
         >
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '60%', height: '120%', background: 'radial-gradient(ellipse, rgba(124,58,237,0.15) 0%, transparent 60%)', filter: 'blur(40px)', zIndex: -1, animation: 'pulse 4s infinite alternate' }} aria-hidden="true" />
           Rushikesh
           <br />
-          <span className="text-gradient">Kunisetty</span>
+          <span className="text-gradient" style={{ textShadow: '0 0 80px rgba(124,58,237,0.3)', display: 'inline-block' }}>Kunisetty</span>
         </motion.h1>
 
         <motion.div
@@ -150,7 +164,7 @@ export default function Hero() {
             gap: '2px',
           }}
         >
-          <span style={{ color: '#7C3AED' }}>{displayed}</span>
+          <span className="shimmer-text" style={{ fontWeight: '700' }}>{displayed}</span>
           <span
             className="animate-blink"
             style={{ color: '#7C3AED', marginLeft: '1px', fontWeight: '300' }}

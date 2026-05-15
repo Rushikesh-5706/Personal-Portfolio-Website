@@ -14,14 +14,27 @@ const portfolioData = {
   skills: [
     { name: 'Artificial Intelligence', category: 'AI & ML' },
     { name: 'Machine Learning', category: 'AI & ML' },
+    { name: 'Deep Learning', category: 'AI & ML' },
+    { name: 'LLM Engineering', category: 'AI & ML' },
+    { name: 'Prompt Engineering', category: 'AI & ML' },
+    { name: 'Computer Vision', category: 'AI & ML' },
     { name: 'Amazon Bedrock', category: 'Cloud' },
-    { name: 'System Design', category: 'Cloud' },
+    { name: 'AWS Lambda', category: 'Cloud' },
     { name: 'DynamoDB', category: 'Cloud' },
+    { name: 'System Design', category: 'Cloud' },
+    { name: 'Cloud Security', category: 'Cloud' },
+    { name: 'Serverless Architecture', category: 'Cloud' },
     { name: 'API Development', category: 'Backend' },
     { name: 'Python', category: 'Backend' },
+    { name: 'FastAPI', category: 'Backend' },
+    { name: 'Docker', category: 'Backend' },
     { name: 'Automated Testing', category: 'Backend' },
+    { name: 'REST APIs', category: 'Backend' },
     { name: 'Blockchain', category: 'Web3' },
     { name: 'Smart Contract Development', category: 'Web3' },
+    { name: 'Solidity', category: 'Web3' },
+    { name: 'Chainlink CCIP', category: 'Web3' },
+    { name: 'Web3', category: 'Web3' },
   ],
   projects: [
     {
@@ -116,6 +129,10 @@ const portfolioData = {
       description: 'Certified in developing, deploying, and debugging cloud-native applications using AWS services, serverless architectures, and modern deployment workflows.',
       provider: 'Amazon Web Services',
       icon: 'aws',
+      links: {
+        view: '#',
+        verify: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/7700928b92ab4b7187d399cfbe2f1fbf',
+      },
     },
     {
       title: 'IBM Generative AI Engineering Professional Certificate',
@@ -123,6 +140,10 @@ const portfolioData = {
       description: 'Professional certification focused on Generative AI, prompt engineering, large language models, AI workflows, and practical AI application development.',
       provider: 'IBM',
       icon: 'ibm',
+      links: {
+        view: '#',
+        verify: '#',
+      },
     },
     {
       title: 'Blockchain Developer Training',
@@ -130,6 +151,10 @@ const portfolioData = {
       description: 'Completed blockchain developer training covering smart contracts, decentralized applications, Web3 fundamentals, and blockchain architecture concepts.',
       provider: 'Simplilearn SkillUp',
       icon: 'blockchain',
+      links: {
+        view: '#',
+        verify: 'https://simpli-web.app.link/e/xFhVMOf492b',
+      },
     },
     {
       title: 'Google Cloud – Cloud Engineering Certificate',
@@ -137,6 +162,10 @@ const portfolioData = {
       description: 'Certified in cloud engineering concepts including infrastructure deployment, cloud services, scalability, and cloud operations on Google Cloud Platform.',
       provider: 'Google Cloud',
       icon: 'gcp',
+      links: {
+        view: '#',
+        verify: '#',
+      },
     },
     {
       title: 'OCI DevOps Professional',
@@ -144,6 +173,10 @@ const portfolioData = {
       description: 'Professional certification covering DevOps practices, CI/CD pipelines, cloud automation, monitoring, and deployment workflows on Oracle Cloud Infrastructure.',
       provider: 'Oracle Cloud Infrastructure',
       icon: 'oracle',
+      links: {
+        view: '#',
+        verify: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=2A519FC4C50A1078C0B10A9923BD6EF41A8012EBE83CB8CBA9DD19222257F54D',
+      },
     },
     {
       title: 'IT Specialist HTML & CSS',
@@ -151,6 +184,10 @@ const portfolioData = {
       description: 'Certified in modern HTML5 and CSS3 development, responsive layouts, UI structuring, styling techniques, and professional frontend web design principles.',
       provider: 'IT Specialist Certification',
       icon: 'code',
+      links: {
+        view: '#',
+        verify: 'https://www.certiport.com/Portal/Pages/CredentialVerification.aspx?code=wkV2V-2Fvm',
+      },
     },
   ],
   achievements: [
@@ -167,21 +204,44 @@ const portfolioData = {
       highlight: false,
     },
   ],
-  experience: {
-    role: 'AWS Cloud Intern',
-    company: 'Technical Hub Pvt Ltd',
-    mode: 'On-site',
-    duration: 'May 2025 – June 2025',
-    description_points: [
-      'Configured VPC networking, subnets, route tables, and security groups to support scalable EC2-based infrastructure.',
-      'Worked with AWS services including EC2, IAM, and VPC while following secure cloud configuration practices.',
-      'Supported deployment and management of cloud workloads on AWS, improving infrastructure reliability and operational consistency.',
-      'Gained hands-on experience in AWS cloud infrastructure, networking, security fundamentals, and deployment workflows.',
-    ],
-    skills: ['AWS', 'EC2', 'VPC', 'IAM', 'Networking', 'Security Basics'],
-    certificate_button: 'View Certificate',
-    certificateUrl: '/experience-letter.pdf',
-  },
+  experience: [
+    {
+      role: 'AWS Cloud Intern',
+      company: 'Technical Hub Pvt Ltd',
+      mode: 'On-site',
+      duration: 'May 2025 – June 2025',
+      description_points: [
+        'Configured VPC networking, subnets, route tables, and security groups to support scalable EC2-based infrastructure.',
+        'Worked with AWS services including EC2, IAM, and VPC while following secure cloud configuration practices.',
+        'Supported deployment and management of cloud workloads on AWS, improving infrastructure reliability and operational consistency.',
+        'Gained hands-on experience in AWS cloud infrastructure, networking, security fundamentals, and deployment workflows.',
+      ],
+      skills: ['AWS', 'EC2', 'VPC', 'IAM', 'Networking', 'Security Basics'],
+      certificate_button: 'View Certificate',
+      certificateUrl: '/experience-letter.pdf',
+    },
+    {
+      role: 'Entrepreneurship Development Cell Member',
+      company: 'Aditya College of Engineering & Technology',
+      mode: 'Student Leadership Program',
+      duration: '2023 – Present',
+      description_points: [
+        'Organized and coordinated technical workshops, innovation events, and startup awareness sessions for students across multiple departments.',
+        'Collaborated in conducting Google technology workshops and developer-focused sessions within the college ecosystem.',
+        'Supported event management, technical coordination, and student engagement activities for entrepreneurship and innovation initiatives.',
+        'Developed leadership, communication, public speaking, and technical event management skills through active community participation.',
+      ],
+      skills: [
+        'Leadership',
+        'Event Management',
+        'Public Speaking',
+        'Technical Workshops',
+        'Team Collaboration',
+      ],
+      certificate_button: null,
+      certificateUrl: null,
+    },
+  ],
   resumeUrl: '/resume.pdf',
 }
 
