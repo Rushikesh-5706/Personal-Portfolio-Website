@@ -15,7 +15,7 @@ import Contact from './components/sections/Contact'
 export default function App() {
   return (
     <ParallaxProvider>
-      <div className="noise-overlay" />
+      <div className="noise-overlay" aria-hidden="true" />
       <ScrollProgress />
       <Navbar />
       <main id="main-content">

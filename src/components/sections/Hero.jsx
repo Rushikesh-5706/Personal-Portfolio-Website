@@ -136,7 +136,6 @@ export default function Hero() {
             textShadow: '0 20px 40px rgba(0,0,0,0.5)',
             width: '100%',
             maxWidth: '100%',
-            whiteSpace: 'nowrap',
             position: 'relative',
           }}
         >

@@ -141,8 +141,8 @@ const portfolioData = {
       provider: 'IBM',
       icon: 'ibm',
       links: {
-        view: '#',
-        verify: '#',
+        view: null,
+        verify: null,
       },
     },
     {
@@ -163,8 +163,8 @@ const portfolioData = {
       provider: 'Google Cloud',
       icon: 'gcp',
       links: {
-        view: '#',
-        verify: '#',
+        view: null,
+        verify: null,
       },
     },
     {

@@ -64,7 +64,7 @@ export default function About() {
                       alt="Rushikesh Kunisetty profile photo"
                       width="320"
                       height="320"
-                      fetchpriority="high"
+                      fetchPriority="high"
                       decoding="async"
                       style={{
                         width: '100%',
@@ -131,6 +131,7 @@ export default function About() {
               >
                 {stats.map((stat) => (
                     <motion.div
+                      key={stat.label}
                       whileHover={{ y: -4, backgroundColor: 'rgba(124,58,237,0.1)' }}
                       style={{
                         padding: '20px',

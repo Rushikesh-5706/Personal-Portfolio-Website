@@ -97,7 +97,7 @@ node --version
 
 ```bash
 git clone https://github.com/Rushikesh-5706/Personal-Portfolio-Website.git
-cd Personal-Portfolio-Website/portfolio
+cd Personal-Portfolio-Website
 npm install
 ```
 

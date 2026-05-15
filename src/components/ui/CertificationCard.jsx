@@ -100,7 +100,7 @@ export default function CertificationCard({ title, category, description, provid
         {description}
       </p>
 
-      {links && (
+      {(links?.view || links?.verify) && (
         <motion.div
           variants={{
             rest: { opacity: 0.8, y: 8 },
@@ -110,43 +110,47 @@ export default function CertificationCard({ title, category, description, provid
             display: 'flex', gap: '12px', width: '100%', justifyContent: 'center', position: 'relative', zIndex: 1, transition: 'all 0.4s ease'
           }}
         >
-          <a
-            href={links.view}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: '6px',
-              padding: '12px 24px', background: colors.glow, color: '#050508',
-              fontSize: '14px', fontWeight: '700', borderRadius: '10px',
-              textDecoration: 'none', transition: 'filter 0.3s ease, transform 0.2s ease',
-              filter: `drop-shadow(0 4px 12px rgba(${parseInt(colors.hex.slice(1,3), 16)}, ${parseInt(colors.hex.slice(3,5), 16)}, ${parseInt(colors.hex.slice(5,7), 16)}, 0.4))`
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)' }}
-            onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)' }}
-          >
-            <FileText size={16} color="#050508" /> View
-          </a>
-          <a
-            href={links.verify}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: '6px',
-              padding: '12px 24px', background: 'transparent', color: colors.hex,
-              border: `1px solid ${colors.glow}`, fontSize: '14px', fontWeight: '600',
-              borderRadius: '10px', textDecoration: 'none', transition: 'background 0.3s ease, color 0.3s ease, transform 0.2s ease',
-            }}
-            onMouseEnter={(e) => { 
-              e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-              e.currentTarget.style.transform = 'translateY(-2px)' 
-            }}
-            onMouseLeave={(e) => { 
-              e.currentTarget.style.background = 'transparent';
-              e.currentTarget.style.transform = 'translateY(0)' 
-            }}
-          >
-            <CheckCircle size={16} /> Verify
-          </a>
+          {links.view && (
+            <a
+              href={links.view}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '6px',
+                padding: '12px 24px', background: colors.glow, color: '#050508',
+                fontSize: '14px', fontWeight: '700', borderRadius: '10px',
+                textDecoration: 'none', transition: 'filter 0.3s ease, transform 0.2s ease',
+                filter: `drop-shadow(0 4px 12px rgba(${parseInt(colors.hex.slice(1,3), 16)}, ${parseInt(colors.hex.slice(3,5), 16)}, ${parseInt(colors.hex.slice(5,7), 16)}, 0.4))`
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)' }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)' }}
+            >
+              <FileText size={16} color="#050508" /> View
+            </a>
+          )}
+          {links.verify && (
+            <a
+              href={links.verify}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '6px',
+                padding: '12px 24px', background: 'transparent', color: colors.hex,
+                border: `1px solid ${colors.glow}`, fontSize: '14px', fontWeight: '600',
+                borderRadius: '10px', textDecoration: 'none', transition: 'background 0.3s ease, color 0.3s ease, transform 0.2s ease',
+              }}
+              onMouseEnter={(e) => { 
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.transform = 'translateY(-2px)' 
+              }}
+              onMouseLeave={(e) => { 
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.transform = 'translateY(0)' 
+              }}
+            >
+              <CheckCircle size={16} /> Verify
+            </a>
+          )}
         </motion.div>
       )}
     </motion.article>

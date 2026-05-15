@@ -19,6 +19,7 @@ export default function Projects() {
     <section id="projects" aria-label="Projects" style={{ padding: 'clamp(80px, 10vw, 140px) 24px' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
+          ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
@@ -32,7 +33,6 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}

@@ -28,6 +28,7 @@ export default function Skills() {
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
+          ref={ref}
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
@@ -41,7 +42,6 @@ export default function Skills() {
         </motion.div>
 
         <motion.div
-          ref={ref}
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
