@@ -34,7 +34,13 @@ export default function SkillBadge({ name, category }) {
         backdropFilter: 'blur(8px)',
       }}
     >
-      <Icon size={20} color={config.color} aria-hidden="true" />
+      <motion.div
+        animate={{ y: [0, -3, 0] }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ display: 'flex', alignItems: 'center' }}
+      >
+        <Icon size={20} color={config.color} aria-hidden="true" />
+      </motion.div>
       <span style={{ fontSize: '14px', fontWeight: '500', color: '#e8e8f4' }}>{name}</span>
     </motion.div>
   )

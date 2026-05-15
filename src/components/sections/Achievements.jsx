@@ -35,7 +35,7 @@ export default function Achievements() {
           animate={inView ? 'visible' : 'hidden'}
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
             gap: '24px',
             alignItems: 'stretch',
           }}

@@ -130,7 +130,7 @@ const portfolioData = {
       provider: 'Amazon Web Services',
       icon: 'aws',
       links: {
-        view: '#',
+        view: '/aws-developer-certificate.pdf',
         verify: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/7700928b92ab4b7187d399cfbe2f1fbf',
       },
     },
@@ -141,7 +141,7 @@ const portfolioData = {
       provider: 'IBM',
       icon: 'ibm',
       links: {
-        view: '#',
+        view: '/ibm-genai-certificate.pdf',
         verify: '#',
       },
     },
@@ -152,7 +152,7 @@ const portfolioData = {
       provider: 'Simplilearn SkillUp',
       icon: 'blockchain',
       links: {
-        view: '#',
+        view: '/blockchain-certificate.pdf',
         verify: 'https://simpli-web.app.link/e/xFhVMOf492b',
       },
     },
@@ -163,7 +163,7 @@ const portfolioData = {
       provider: 'Google Cloud',
       icon: 'gcp',
       links: {
-        view: '#',
+        view: '/google-cloud-certificate.pdf',
         verify: '#',
       },
     },
@@ -174,7 +174,7 @@ const portfolioData = {
       provider: 'Oracle Cloud Infrastructure',
       icon: 'oracle',
       links: {
-        view: '#',
+        view: '/oci-devops-certificate.pdf',
         verify: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=2A519FC4C50A1078C0B10A9923BD6EF41A8012EBE83CB8CBA9DD19222257F54D',
       },
     },
@@ -185,7 +185,7 @@ const portfolioData = {
       provider: 'IT Specialist Certification',
       icon: 'code',
       links: {
-        view: '#',
+        view: '/html-css-certificate.pdf',
         verify: 'https://www.certiport.com/Portal/Pages/CredentialVerification.aspx?code=wkV2V-2Fvm',
       },
     },

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Parallax } from 'react-scroll-parallax'
 import { ChevronDown, Download } from 'lucide-react'
 import portfolioData from '../../data/portfolioData'
+import MagneticButton from '../ui/MagneticButton'
 
 export default function Hero() {
   const { titles, tagline } = portfolioData
@@ -194,34 +195,28 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.62 }}
           style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
+          <MagneticButton
             onClick={() => scrollTo('projects')}
             className="btn-primary"
           >
             View My Work
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
+          </MagneticButton>
+          <MagneticButton
             onClick={() => scrollTo('contact')}
             className="btn-secondary"
           >
             Get in Touch
-          </motion.button>
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
+          </MagneticButton>
+          <MagneticButton
             href={portfolioData.resumeUrl || '#'}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+            style={{ alignItems: 'center', gap: '8px' }}
           >
             <Download size={18} />
             Resume
-          </motion.a>
+          </MagneticButton>
         </motion.div>
       </div>
 
