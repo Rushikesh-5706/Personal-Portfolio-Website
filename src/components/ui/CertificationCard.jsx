@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Cloud, Award, Blocks, Server, Database, Code, FileText, CheckCircle } from 'lucide-react'
+import { Cloud, Award, Blocks, Server, Database, Code, FileText, CheckCircle, Brain } from 'lucide-react'
 
 const iconMap = {
   aws: Cloud,
@@ -8,6 +8,7 @@ const iconMap = {
   gcp: Server,
   oracle: Database,
   code: Code,
+  microsoft: Brain,
 }
 
 const colorMap = {
@@ -17,9 +18,10 @@ const colorMap = {
   gcp: { glow: '#3b82f6', hex: '#3b82f6' },
   oracle: { glow: '#ef4444', hex: '#ef4444' },
   code: { glow: '#10b981', hex: '#10b981' },
+  microsoft: { glow: '#38bdf8', hex: '#38bdf8' },
 }
 
-export default function CertificationCard({ title, category, description, provider, icon, links }) {
+export default function CertificationCard({ title, category, description, provider, icon, links, tags }) {
   const Icon = iconMap[icon] || Award
   const colors = colorMap[icon] || { glow: '#7C3AED', hex: '#7C3AED' }
 
@@ -96,9 +98,31 @@ export default function CertificationCard({ title, category, description, provid
         {provider}
       </div>
 
-      <p style={{ fontSize: 'clamp(14px, 3vw, 15px)', color: '#8888b0', lineHeight: '1.7', flexGrow: 1, position: 'relative', zIndex: 1, marginBottom: links ? '32px' : '0' }}>
+      <p style={{ fontSize: 'clamp(14px, 3vw, 15px)', color: '#8888b0', lineHeight: '1.7', flexGrow: 1, position: 'relative', zIndex: 1, marginBottom: (tags || links) ? '24px' : '0' }}>
         {description}
       </p>
+
+      {tags && tags.length > 0 && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              style={{
+                padding: '4px 10px',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '8px',
+                fontSize: 'clamp(11px, 2vw, 12px)',
+                color: '#a0a0c0',
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: '500',
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
 
       {(links?.view || links?.verify) && (
         <motion.div

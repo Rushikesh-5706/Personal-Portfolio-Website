@@ -49,6 +49,7 @@ export default function Certifications() {
                 provider={cert.provider}
                 icon={cert.icon}
                 links={cert.links}
+                tags={cert.tags}
               />
             </motion.div>
           ))}

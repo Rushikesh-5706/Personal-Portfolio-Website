@@ -135,14 +135,15 @@ const portfolioData = {
       },
     },
     {
-      title: 'IBM Generative AI Engineering Professional Certificate',
-      category: 'GENERATIVE AI ENGINEERING',
-      description: 'Professional certification focused on Generative AI, prompt engineering, large language models, AI workflows, and practical AI application development.',
-      provider: 'IBM',
-      icon: 'ibm',
+      title: 'Career Essentials in Generative AI',
+      category: 'GENERATIVE AI',
+      description: 'Completed a professional learning path focused on Generative AI fundamentals, Microsoft Copilot, responsible AI practices, prompt engineering concepts, and practical AI productivity workflows.',
+      provider: 'Microsoft × LinkedIn Learning',
+      icon: 'microsoft',
+      tags: ['Generative AI', 'Microsoft Copilot', 'Responsible AI', 'Prompt Engineering'],
       links: {
-        view: null,
-        verify: null,
+        view: '/microsoft-linkedin-certificate.pdf',
+        verify: 'https://www.linkedin.com/learning/certificates/4404b57840042832cb3bb584ce88920afe7c6c693b53c6d81b212517034148e1?trk=share_certificate',
       },
     },
     {
