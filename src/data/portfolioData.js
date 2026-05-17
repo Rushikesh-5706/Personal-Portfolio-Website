@@ -129,6 +129,7 @@ const portfolioData = {
       description: 'Certified in developing, deploying, and debugging cloud-native applications using AWS services, serverless architectures, and modern deployment workflows.',
       provider: 'Amazon Web Services',
       icon: 'aws',
+      tags: ['AWS', 'Serverless', 'Cloud Native', 'Deployment', 'CI/CD'],
       links: {
         view: '/aws-developer-certificate.pdf',
         verify: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/7700928b92ab4b7187d399cfbe2f1fbf',
@@ -152,6 +153,7 @@ const portfolioData = {
       description: 'Completed blockchain developer training covering smart contracts, decentralized applications, Web3 fundamentals, and blockchain architecture concepts.',
       provider: 'Simplilearn SkillUp',
       icon: 'blockchain',
+      tags: ['Solidity', 'Smart Contracts', 'Web3', 'DApps', 'Blockchain'],
       links: {
         view: '/blockchain-certificate.pdf',
         verify: 'https://simpli-web.app.link/e/xFhVMOf492b',
@@ -163,6 +165,7 @@ const portfolioData = {
       description: 'Certified in cloud engineering concepts including infrastructure deployment, cloud services, scalability, and cloud operations on Google Cloud Platform.',
       provider: 'Google Cloud',
       icon: 'gcp',
+      tags: ['Google Cloud', 'Compute Engine', 'IAM', 'Networking', 'Cloud Ops'],
       links: {
         view: null,
         verify: null,
@@ -174,6 +177,7 @@ const portfolioData = {
       description: 'Professional certification covering DevOps practices, CI/CD pipelines, cloud automation, monitoring, and deployment workflows on Oracle Cloud Infrastructure.',
       provider: 'Oracle Cloud Infrastructure',
       icon: 'oracle',
+      tags: ['OCI', 'DevOps', 'CI/CD', 'Infrastructure', 'Automation'],
       links: {
         view: '/oci-devops-certificate.pdf',
         verify: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=2A519FC4C50A1078C0B10A9923BD6EF41A8012EBE83CB8CBA9DD19222257F54D',
@@ -185,6 +189,7 @@ const portfolioData = {
       description: 'Certified in modern HTML5 and CSS3 development, responsive layouts, UI structuring, styling techniques, and professional frontend web design principles.',
       provider: 'IT Specialist Certification',
       icon: 'code',
+      tags: ['HTML5', 'CSS3', 'Responsive Design', 'UI Development', 'Web Standards'],
       links: {
         view: '/html-css-certificate.pdf',
         verify: 'https://www.certiport.com/Portal/Pages/CredentialVerification.aspx?code=wkV2V-2Fvm',

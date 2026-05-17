@@ -105,8 +105,9 @@ export default function CertificationCard({ title, category, description, provid
       {tags && tags.length > 0 && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '24px', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
           {tags.map((tag) => (
-            <span
+            <motion.span
               key={tag}
+              whileHover={{ y: -3, backgroundColor: 'rgba(255,255,255,0.08)' }}
               style={{
                 padding: '4px 10px',
                 background: 'rgba(255,255,255,0.03)',
@@ -116,10 +117,11 @@ export default function CertificationCard({ title, category, description, provid
                 color: '#a0a0c0',
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: '500',
+                cursor: 'default',
               }}
             >
               {tag}
-            </span>
+            </motion.span>
           ))}
         </div>
       )}
